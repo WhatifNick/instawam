@@ -10,6 +10,7 @@
   <%= @imagepost.user.name %>
 </p>
 
+<p><%= image_tag @imagepost.image_url(:medium) %></p>
 <p>
   <strong>Caption:</strong>
   <%= @imagepost.caption %>
