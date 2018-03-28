@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Imageposts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Image url</th>
+      <th>User</th>
+      <th>Caption</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @imageposts.each do |imagepost| %>
+
+      <tr>
+        <td><%= imagepost.image_url%></td>
+        <td><%= imagepost.user.email %></td>
+        <td><%= imagepost.caption %></td>
+        <td><%= link_to 'Show', imagepost %></td>
+        <td><%= link_to 'Edit', edit_imagepost_path(imagepost) %></td>
+        <td><%= link_to 'Destroy', imagepost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Imagepost', new_imagepost_path %>
