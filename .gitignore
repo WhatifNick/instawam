@@ -17,7 +17,7 @@
 !/log/.keep
 !/tmp/.keep
 
-config/cloudinary.yml
+/config/cloudinary.yml
 
 /node_modules
 /yarn-error.log
